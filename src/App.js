@@ -19,7 +19,7 @@ function App() {
 const[filter, setFilter] = useState({sort: '', query: ''})
 const [modal, setModal] = useState(false);
 
-
+/*bfgbf*/
 const sortedTanks = useMemo(() =>{
   console.log('Отработано')
 if (filter.sort) {
