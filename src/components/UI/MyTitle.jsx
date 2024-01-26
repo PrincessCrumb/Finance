@@ -4,7 +4,7 @@ import React from "react";
 
 export default function MyTitle(props) {
     return (
-        <Typography variant="h3" style={{color: "red"}} gutterBottom>
+        <Typography variant="h5" gutterBottom>
             {props.text}
         </Typography>
     )

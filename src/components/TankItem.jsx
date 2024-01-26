@@ -1,7 +1,7 @@
 import React from "react";
-import MyButton from "./UI/MyButton";
+/*import MyButton from "./UI/MyButton";*/
 import {Button} from "@mui/material";
-import DetailsButton from "./DetailsButton";
+/*import DetailsButton from "./DetailsButton";*/
 import {SimpleDialog} from "./MyTitle/SimpleDialog";
 
 const TankItem = (props) => {
@@ -33,7 +33,7 @@ const TankItem = (props) => {
             </div>
 
             <div className='tank__btns'>
-                <Button variant="text"
+                <Button  variant="contained"
                         onClick={handleClickOpen}>
                     Детали
                 </Button>
@@ -42,9 +42,9 @@ const TankItem = (props) => {
                     open={open}
                     onClose={handleClose}
                 />
-                <DetailsButton tank={props.tank}/>
+               
 
-                <MyButton onClick={() => props.remove(props.tank)}>Удалить</MyButton>
+                <Button variant="contained" onClick={() => props.remove(props.tank)}>Удалить</Button>
             </div>
         </div>
 

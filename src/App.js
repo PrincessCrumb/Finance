@@ -1,14 +1,18 @@
 import React, {useMemo, useState} from "react";
-import MyButton from './components/UI/MyButton';
+/*import MyButton from './components/UI/MyButton';*/
 import TankList from "./components/TankList";
 import TankForm from './components/TankForm';
 import MyModal from "./components/UI/MyModal";
 import TankFilter from "./components/TankFilter";
+import Button from '@mui/material/Button';
+
+
+
 
 function App() {
     useMemo(() => {
         let data = localStorage.getItem('tanks');
-        if (data === undefined || data === null || data === []) {
+        if (data === undefined || data === null ) {
             const data = [
                 {id: 1, title: "Счет в Офшорах", type: "текущие счета", bank: "ВТБ", body: "788897"},
                 {id: 2, title: "Вклад в Сбербанке", type: "бюджетные счета", bank: "СберБанк", body: "23500"},
@@ -49,9 +53,9 @@ function App() {
     return (
 
         <div className='App'>
-            <MyButton style={{marginTop: 30}} onClick={() => setModal(true)}>
+            <Button variant="contained" style={{marginTop: 30}} onClick={() => setModal(true)}>
                 Создать счет
-            </MyButton>
+            </Button>
             <MyModal visible={modal} setVisible={setModal}>
                 <TankForm create={createTank}/>
             </MyModal>

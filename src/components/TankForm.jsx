@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import MyInput from "./UI/MyInput";
-import MyButton from "./UI/MyButton";
+/*import MyButton from "./UI/MyButton";*/
+import {Button} from "@mui/material";
 
 const TankForm = ({create}) => {
     const [tank, setTank] = useState({title: '', body: '', type:'', bank: ''})
@@ -44,7 +45,7 @@ const TankForm = ({create}) => {
                 type="text"
                 placeholder="Баланс"
             />
-            <MyButton onClick={addNewTank}>Создать счет</MyButton>
+            <Button variant="contained" onClick={addNewTank}>Создать счет</Button>
         </form>
     );
 };

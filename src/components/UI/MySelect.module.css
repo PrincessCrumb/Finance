@@ -1,0 +1,12 @@
+.mySelect{
+    content: "";
+ width: 300;
+ height: 0;
+ position: absolute;
+ right: 100000px;
+ top: 50%;
+ margin-top: -6px;
+ border-width: 6px 0 6px 6px;
+ border-style: solid;
+ border-color: transparent #fff;
+};
